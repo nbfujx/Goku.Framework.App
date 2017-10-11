@@ -1,0 +1,11 @@
+{
+  "index.html": {
+    "href": "index.html",
+    "resources": [
+      "dist/build.js",
+      "static/ionic/css/ionic.css"
+    ],
+    "refer": [],
+    "priority": 0
+  }
+}
