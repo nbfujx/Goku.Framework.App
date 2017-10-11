@@ -1,7 +1,7 @@
 ﻿{
     "@platforms": ["android", "iPhone", "iPad"],
     "id": "H530579CD",/*应用的标识，创建应用时自动生成，勿手动修改*/
-    "name": "myVueApp",/*应用名称，程序桌面图标名称*/
+    "name": "Goku.Framework.App",/*应用名称，程序桌面图标名称*/
     "version": {
         "name": "1.0",/*应用版本名称*/
         "code": ""
