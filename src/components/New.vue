@@ -1,8 +1,8 @@
 <template>
-    <div class="page has-navbar has-tabbar" v-nav="{title: '新组件',showBackButton: true}" v-tabbar-menu-index="3">
+    <div class="page has-navbar has-tabbar" v-nav="{title: 'H5组件',showBackButton: true}" v-tabbar-menu-index="3">
         <div class="page-content padding-top">
             <button class="button button-balanced button-block" @click="onCamera">拍照</button>
-            <button class="button button-balanced button-block" @click="onBarcode">扫码</button>
+            <!--<button class="button button-balanced button-block" @click="onBarcode">扫码</button>-->
             <button class="button button-balanced button-block" @click="onDial">电话</button>
             <button class="button button-balanced button-block" @click="onWebview">创建新窗体</button>
             <button class="button button-balanced button-block" @click="galleryImg">选择单张图片</button>
