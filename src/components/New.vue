@@ -3,10 +3,12 @@
         <div class="page-content padding-top">
             <button class="button button-balanced button-block" @click="onCamera">拍照</button>
             <!--<button class="button button-balanced button-block" @click="onBarcode">扫码</button>-->
-            <button class="button button-balanced button-block" @click="onDial">电话</button>
+            <button class="button button-balanced button-block" @click="onDial">打电话</button>
+            <button class="button button-balanced button-block" @click="smstest">发短信</button>
             <button class="button button-balanced button-block" @click="onWebview">创建新窗体</button>
             <button class="button button-balanced button-block" @click="galleryImg">选择单张图片</button>
             <button class="button button-balanced button-block" @click="galleryImgs">选择多张图片</button>
+            <button class="button button-balanced button-block" @click="find">打开通讯录</button>
             <div id= "bcid" class="Barcode_panel"></div>
         </div>
     </div>
@@ -62,6 +64,27 @@
                 }, function ( e ) {
                     console.log( "pick img failed " );
                 },{filter:"image",multiple:true});
+            },
+            find(){
+                plus.contacts.getAddressBook(plus.contacts.ADDRESSBOOK_PHONE, function (addressbook) {
+                    addressbook.find(["displayName","phoneNumbers"],function(contacts){
+                        alert(contacts.length);
+                    }, function () {
+                        alert("error");
+                    },{multiple:true});
+                },function(e){
+                    alert("Get address book failed: " + e.message);
+                });
+            },
+            smstest(){
+                var msg = plus.messaging.createMessage(plus.messaging.TYPE_SMS);
+                msg.to = ['15757488542'];
+                msg.body = 'This is HTML5 Plus example test message';
+                plus.messaging.sendMessage( msg ,function () {
+                    alert("send success");
+                },function(e){
+                    alert("send failed: " + e.message);
+                });
             }
         }
     }

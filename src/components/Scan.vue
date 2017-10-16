@@ -13,10 +13,10 @@
         console.log("Barcode scan");
         scan = new plus.barcode.Barcode('bcid');
         scan.onmarked = function (type, result) {
-          console.log("Barcode success: " + result);
+            plus.nativeUI.toast( result);
         };
         scan.onerror = function (type, result) {
-          console.log("Barcode failed: " + result);
+            plus.nativeUI.toast( result);
         };
         scan.start();
       },

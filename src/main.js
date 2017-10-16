@@ -6,6 +6,7 @@ import Index from './pages/Index.vue'
 import About from './components/About.vue'
 import Home from './components/Home.vue'
 import New from './components/New.vue'
+import Scan from './components/Scan.vue'
 
 // Routes
 const routes = {
@@ -22,6 +23,9 @@ const routes = {
     },
     '/New': {
         component: New
+    },
+    '/Scan': {
+        component: Scan
     }
 }
 
