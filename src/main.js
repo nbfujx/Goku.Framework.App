@@ -7,6 +7,7 @@ import About from './components/About.vue'
 import Home from './components/Home.vue'
 import New from './components/New.vue'
 import Scan from './components/Scan.vue'
+import ScanResult from './components/ScanResult.vue'
 
 // Routes
 const routes = {
@@ -26,6 +27,9 @@ const routes = {
     },
     '/Scan': {
         component: Scan
+    },
+    '/ScanResult': {
+        component: ScanResult
     }
 }
 
